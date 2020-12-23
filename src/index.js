@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// CSS
+import "./index.css";
 
 function BookList() {
   return (
-    <section>
+    <section className="booklist">
       <Book />
     </section>
   );
@@ -11,7 +13,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image></Image>
       <Title />
       <Author />
@@ -20,12 +22,16 @@ const Book = () => {
 };
 const Image = () => (
   <img
-    src="https://m.media-amazon.com/images/I/81ySRJMhN5L._AC_UL480_FMwebp_QL65_.jpg"
+    src="https://m.media-amazon.com/images/I/81ySRJMhN5L._AC_UL320_.jpg"
     alt=""
   />
 );
 
 const Title = () => <h1>Lo último que verán tus ojos</h1>;
-const Author = () => <h4>Isabel San Sebastián</h4>;
+const Author = () => (
+  <h4 style={{ color: "#617d98", fontSize: "0.75rem", margin: "0.25rem" }}>
+    Isabel San Sebastián
+  </h4>
+);
 
 ReactDOM.render(<BookList />, document.getElementById("root"));
