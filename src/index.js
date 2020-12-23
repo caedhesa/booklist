@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 // CSS
 import "./index.css";
+
+//setup vars
+const author = "Isabel San Sebastián";
+const title = "Lo último que verán tus ojos";
+const img = "https://m.media-amazon.com/images/I/81ySRJMhN5L._AC_UL320_.jpg";
 
 function BookList() {
   return (
@@ -10,17 +16,13 @@ function BookList() {
     </section>
   );
 }
-const author = "Isabel San Sebastián";
+
 const Book = () => {
-  const title = "Lo último que verán tus ojos";
   return (
     <article className="book">
-      <img
-        src="https://m.media-amazon.com/images/I/81ySRJMhN5L._AC_UL320_.jpg"
-        alt=""
-      />
+      <img src={img} alt="" />
       <h1>{title}</h1>
-      <h4>{author.toUpperCase()}</h4>
+      <h4>{author}</h4>
     </article>
   );
 };
