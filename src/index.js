@@ -10,28 +10,19 @@ function BookList() {
     </section>
   );
 }
-
+const author = "Isabel San Sebastián";
 const Book = () => {
+  const title = "Lo último que verán tus ojos";
   return (
     <article className="book">
-      <Image></Image>
-      <Title />
-      <Author />
+      <img
+        src="https://m.media-amazon.com/images/I/81ySRJMhN5L._AC_UL320_.jpg"
+        alt=""
+      />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 };
-const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/81ySRJMhN5L._AC_UL320_.jpg"
-    alt=""
-  />
-);
-
-const Title = () => <h1>Lo último que verán tus ojos</h1>;
-const Author = () => (
-  <h4 style={{ color: "#617d98", fontSize: "0.75rem", margin: "0.25rem" }}>
-    Isabel San Sebastián
-  </h4>
-);
 
 ReactDOM.render(<BookList />, document.getElementById("root"));
